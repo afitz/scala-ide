@@ -92,6 +92,12 @@
       </page>
       <page
             category="org.scala-ide.sdt.core.preferences"
+            class="org.scalaide.ui.internal.preferences.CustomHighlightingPreferencePage"
+            id="org.scalaide.ui.internal.preferences.CustomHighlightingPreferencePage"
+            name="Custom highlighting">
+      </page>
+      <page
+            category="org.scala-ide.sdt.core.preferences"
             class="org.scalaide.logging.ui.properties.LoggingPreferencePage"
             id="org.scala-ide.sdt.core.properties.Logging"
             name="Logging">
@@ -102,8 +108,7 @@
             id="org.scala-ide.sdt.core.editor"
             name="Editor">
       </page>      
-   </extension>
-
+  </extension>
 
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="scala.tools.eclipse.scalaSource" name="Scala Source File"
@@ -1468,7 +1473,7 @@
  <extension
        point="org.scala-ide.sdt.core.reconciliationParticipants">
     <participant
-          class="org.scalaide.ui.internal.editor.decorators.semantichighlighting.SemanticHighlightingReconciliationParticipant"
+          class="org.scalaide.ui.internal.editor.decorators.semantichighlighting.ImplicitHighlighter"
           id="org.scala-ide.sdt.core.SemanticHighlightingPresenter"
           name="Semantic Highlighting">
     </participant>
